@@ -1,5 +1,6 @@
 package com.example.pointtheway
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -23,6 +24,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun selectTargetLocation() {
         Log.d("Stefan", "selectTargetLocation() executed")
+        val switchActivityIntent = Intent(this, SelectLocationActivity::class.java)
+        startActivity(switchActivityIntent)
     }
 
 
