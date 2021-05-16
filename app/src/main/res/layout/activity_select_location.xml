@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SelectLocationActivity">
 
     <fragment
         android:id="@+id/shop_fragment"
@@ -14,10 +14,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmLocation" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmLocationButton" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/cancelLocationButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:insetTop="0dp"
@@ -28,14 +28,15 @@
         app:layout_constraintWidth_percent=".5" />
 
     <Button
-        android:id="@+id/confirmLocation"
+        android:id="@+id/confirmLocationButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:text="@string/select_location_button_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/cancelLocationButton"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent=".5" />
 
